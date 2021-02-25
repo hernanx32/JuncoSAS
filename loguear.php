@@ -24,6 +24,7 @@ if(isset($_SESSION['rol'])){
 
 
 
+
 $usuario = $_POST[usuario];
 $clave = $_POST[clave];
 

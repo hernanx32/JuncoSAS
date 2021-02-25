@@ -4,4 +4,5 @@
 	require_once("fns/inicio.php");
 	/* Logueo Bases de Datos */
 	require_once("fns/conexion.php");
+
 ?>

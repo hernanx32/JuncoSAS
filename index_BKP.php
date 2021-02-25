@@ -4,6 +4,7 @@ conexion_db($datos_direip, $datos_usuariodb, $datos_clavedb, $datos_database);
 $titulopag='BIENVENIDOS';
 cabezera($titulopag , $datos_nombempresa);
 
+
 ?> 
 <script type="text/javascript" src="js/detectmobile.js"></script>
 <script type="text/javascript" src="fns/validadores.js"></script>
