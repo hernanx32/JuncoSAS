@@ -4,7 +4,7 @@ conexion_db($datos_direip, $datos_usuariodb, $datos_clavedb, $datos_database);
 $titulopag='BIENVENIDOS';
 cabezera($titulopag , $datos_nombempresa);
 $scr=$_GET[scr];
-echo 
+echo 'hernan';
 ?> 
 
 
