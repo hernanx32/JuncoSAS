@@ -4,8 +4,10 @@ conexion_db($datos_direip, $datos_usuariodb, $datos_clavedb, $datos_database);
 $titulopag='BIENVENIDOS';
 cabezera($titulopag , $datos_nombempresa);
 $scr=$_GET[scr];
-
+echo 
 ?> 
+
+
 <script type="text/javascript" src="js/detectmobile.js"></script>
 <script type="text/javascript" src="fns/validadores.js"></script>
 <table width="750" height="165" border="1" align="center">
@@ -45,16 +47,8 @@ echo $scr;
     </tr>
   </table>
 
-	
-	
-	
-	
-	
-	
-		
-	
-	
-	
+
+
 <?PHP
 //$formpos Inidica la postura del curso en el Formulario	
 //$formnomb Inidica la postura del curso en el Formulario	
@@ -62,3 +56,4 @@ $formpos = 'usuario';
 $formnomb = 'form1';	
 pie($formnomb, $formpos, $datos_nombempresa, $datos_localidad, $datos_copy, $datos_ver, $datos_database, $datos_direip, $estado_conexion); 
 ?>
+	
