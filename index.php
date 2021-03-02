@@ -7,7 +7,6 @@ $scr=$_GET[scr];
 echo 'hernan';
 ?> 
 
-
 <script type="text/javascript" src="js/detectmobile.js"></script>
 <script type="text/javascript" src="fns/validadores.js"></script>
 <table width="750" height="165" border="1" align="center">
