@@ -4,10 +4,7 @@ conexion_db($datos_direip, $datos_usuariodb, $datos_clavedb, $datos_database);
 $titulopag='BIENVENIDOS';
 cabezera($titulopag , $datos_nombempresa);
 $scr=$_GET[scr];
-
-
 ?> 
-
 <script type="text/javascript" src="js/detectmobile.js"></script>
 <script type="text/javascript" src="fns/validadores.js"></script>
 <table width="750" height="165" border="1" align="center">
@@ -15,10 +12,10 @@ $scr=$_GET[scr];
 		<td colspan="3" align="center"><img src="Img/logo750x250.png" width="750" height="250" /></td>
 	</tr>
 </table>
+<?PHP 
 
-<?PHP $mensaje= "Bienvenidos";
+$mensaje= "Bienvenidos";
 ?>
-
 <form id="form1" name="form1" method="POST" action="index.php?scr=login" onSubmit="return validalogin()" autocomplete="off">
   <table width="760" height="92" border="1" align="center">
     <tr>
@@ -43,10 +40,8 @@ $scr=$_GET[scr];
       </td>
     </tr>
   </table>
-
-
-
-<?PHP
+	
+<?PHP 
 //$formpos Inidica la postura del curso en el Formulario	
 //$formnomb Inidica la postura del curso en el Formulario	
 $formpos = 'usuario';

@@ -8,9 +8,10 @@ function cabezera($titulopag , $nomb_empresa)
 <title><?PHP echo $nomb_empresa; ?> - <?PHP echo $titulopag; ?></title>
 <body>
 <?PHP
+//CONFIGURAMOS LA ZONA HORARIA
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+ 
 }
-
-
 function pie($formnomb, $formpos, $nomb_empresa, $datos_localidad, $datos_Copyright, $datos_versoft, $datos_database, $datos_direip, $estado_conexion)
 { ?>
 <table width="760" border="1" align="center">
