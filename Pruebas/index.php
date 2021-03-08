@@ -7,7 +7,7 @@
 
 <body>
 <?PHP echo $_GET['scr']; ?>	
-<form id="logueo" name="logueo" method="post" action="index.php?scr=1">
+<form id="logueo" name="logueo" method="post" action="logeo.php">
   <p>
       <label for="usuario">Usuario:</label>
       <input type="text" name="usuario" id="usuario">
