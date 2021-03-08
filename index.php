@@ -4,7 +4,8 @@ conexion_db($datos_direip, $datos_usuariodb, $datos_clavedb, $datos_database);
 $titulopag='BIENVENIDOS';
 cabezera($titulopag , $datos_nombempresa);
 $scr=$_GET[scr];
-echo 'hernan';
+
+
 ?> 
 
 <script type="text/javascript" src="js/detectmobile.js"></script>
@@ -16,9 +17,6 @@ echo 'hernan';
 </table>
 
 <?PHP $mensaje= "Bienvenidos";
-echo $scr;
-
-
 ?>
 
 <form id="form1" name="form1" method="POST" action="index.php?scr=login" onSubmit="return validalogin()" autocomplete="off">
