@@ -3,7 +3,7 @@ require_once("fns.php");
 conexion_db($datos_direip, $datos_usuariodb, $datos_clavedb, $datos_database);
 $titulopag='BIENVENIDOS';
 cabezera($titulopag , $datos_nombempresa);
-$scr=$_GET[scr];
+$sms=$_GET[sms];
 ?> 
 <script type="text/javascript" src="js/detectmobile.js"></script>
 <script type="text/javascript" src="fns/validadores.js"></script>
@@ -13,38 +13,18 @@ $scr=$_GET[scr];
 	</tr>
 </table>
 <?PHP 
-
 	session_unset();
 	session_destroy();
-
-if($scr=='login'){
-	$usuario = stripslashes($_POST['usuario']);
-	$clave = stripslashes($_POST['clave']);
 	
-	$mysqli = new mysqli("localhost", "root", "LauLuk477", "db_junco");
-	
-	if ($mysqli->connect_errno) {
-    printf("Falló la conexión: %s\n", $mysqli->connect_error);
-    exit();
+	if($sms=='error'){
+		$mensaje='Usuario y Clave Incorrectos';
+	}else{
+		$mensaje='Bienvenido';
 	}
-	
-	$consulta = "SELECT * FROM `usuarios` WHERE usuario = '$usuario' AND clave = '$clave'";
-	if ($resultado = $mysqli->query($consulta))
-	{
-    	printf("La selección devolvió %d filas.\n", $resultado->num_rows);
 		
-		while($mostrar=$resultado->fetch_assoc()){
-			echo $mostrar['nombre_vista'].'</br>';
-			echo $mostrar['usuario'];
-		}
-		$resultado->close();
-	}
-	
-}
 
-$mensaje= "Bienvenidos";
 ?>
-<form id="form1" name="form1" method="POST" action="index.php?scr=login" onSubmit="return validalogin()" autocomplete="off">
+<form id="form1" name="form1" method="POST" action="login.php" onSubmit="return validalogin()" autocomplete="off">
   <table width="760" height="92" border="1" align="center">
     <tr>
       <td width="323" height="26" bgcolor="#CCCCCC">Fecha: <?PHP echo date("d-m-Y");?></td>
