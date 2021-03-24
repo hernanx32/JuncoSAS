@@ -16,6 +16,7 @@ $sms=$_GET[sms];
 	session_unset();
 	session_destroy();
 	
+
 	if($sms=='error'){
 		$mensaje='Usuario y Clave Incorrectos';
 	}else{
