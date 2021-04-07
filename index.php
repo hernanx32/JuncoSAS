@@ -4,6 +4,10 @@ $titulopag='INICIO';
 
 cabezera($titulopag, $datos_nombempresa);	
 
+if($scr=='logout'){
+	session_destroy();
+}
+
 
 
 ?>

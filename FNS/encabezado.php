@@ -8,7 +8,8 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 <head>
 <meta charset="utf-8">
 <title><?PHP echo $nomb_empresa; ?> - <?PHP echo $titulopag; ?></title>
-
+</head>
+<body>
 <?PHP	}
 
 ?>
