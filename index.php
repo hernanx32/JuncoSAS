@@ -1,6 +1,9 @@
 <?PHP session_start();
-require_once("funciones.php");
+require_once("fnes.php");
 $titulopag='Inicio de Sesión';
+
+
+cabezera($titulopag, $datos_nombempresa);
 
 $scr=$_GET[scr];
 if($scr=='logout'){
@@ -17,5 +20,5 @@ $usuario = stripslashes($usuario);  $clave = stripslashes($clave);
 }else {
 	echo 'Inicio Normal';
 }
-cabezera($titulopag, $datos_nombempresa);	
+	
 ?>
