@@ -1,5 +1,6 @@
 <?PHP session_start();
 require_once("fnes.php");
+//TITULO DE LA PAGINA
 $titulopag='Inicio de Sesión';
 
 
