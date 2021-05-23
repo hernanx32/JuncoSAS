@@ -1,5 +1,6 @@
 <?PHP
 $datos_nombempresa='Junco SAS';
+$datos_sucursal='Casa Central';
 $datos_localidad="Formosa";
 $datos_copy="2021";
 $datos_ver="1.0";

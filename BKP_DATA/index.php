@@ -45,7 +45,7 @@ $sms=$_GET[sms];
       <td height="26" bgcolor="#CCCCCC"><?PHP echo $mensaje; ?></td>
     </tr>
     <tr bgcolor="#999999">
-      <td colspan="3" align="center"><input type="submit" name="Submit" value="INGRESAR AL SISTEMA" />
+      <td colspan="3" align="center" bgcolor="#999999"><input type="submit" name="Submit" value="INGRESAR AL SISTEMA" />
       </td>
     </tr>
   </table>

@@ -18,8 +18,12 @@ $usuario = stripslashes($usuario);  $clave = stripslashes($clave);
 	
 	echo 'Logeando Usuario'.$usuario;
 	
-}else {
+}else
+{
 	echo 'Inicio Normal';
-}
+	require_once("SCR/login.php");
+	login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy);
+	
+	}
 	
 ?>
