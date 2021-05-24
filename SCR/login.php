@@ -3,8 +3,9 @@
 function login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy)
 {
 ?>
+<script type="text/javascript" src="js/formulario.js"></script>
 
-<form action="../PAG/index.php?scr=logeo" method="post" name="login" id="login">
+<form action="index.php?scr=logeo" method="post" name="login" id="login">
   <p align="center">Sistema de Gestion y Control  </p>
   <table width="757" height="246" border="1" align="center">
     <tbody>
@@ -17,11 +18,11 @@ function login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver
           <tbody>
             <tr>
               <td width="85">Usuario:</td>
-              <td width="355"><input name="usuario" type="text" id="usuario" tabindex="1" size="30" maxlength="30"></td>
+              <td width="355"><input name="usuario" type="text" id="usuario" tabindex="1" onKeyPress="return bajarEnter(this, event)" size="30" maxlength="30" required title="Ingrese el nombre de usuario."></td>
               </tr>
             <tr>
               <td>Clave:</td>
-              <td><input name="clave" type="password" id="clave" tabindex="2" size="30" maxlength="30"></td>
+              <td><input name="clave" type="password" id="clave" tabindex="2" size="30" maxlength="30" required title="Ingrese el su Clave."></td>
               </tr>
             </tbody>
         </table></td>
