@@ -2,8 +2,6 @@
 require_once("fnes.php");
 //TITULO DE LA PAGINA
 $titulopag='Inicio de Sesión';
-
-
 cabezera($titulopag, $datos_nombempresa);
 
 $scr=$_GET[scr];
@@ -12,11 +10,10 @@ if($scr=='logout'){
 	echo 'Usuario Deslogeado';
 	
 }elseif ($scr=='logeo'){ 
-	
 $usuario = $_POST['usuario'];   	$clave = $_POST['clave'];
 $usuario = stripslashes($usuario);  $clave = stripslashes($clave);
+	echo 'Verificando Datos de: '.$usuario;
 	
-	echo 'Logeando Usuario'.$usuario;
 	
 }else
 {
