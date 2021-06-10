@@ -10,16 +10,15 @@ if($scr=='logout'){
 	echo 'Usuario Deslogeado';
 	
 }elseif ($scr=='logeo'){ 
-$usuario = $_POST['usuario'];   	$clave = $_POST['clave'];
-$usuario = stripslashes($usuario);  $clave = stripslashes($clave);
-	echo 'Verificando Datos de: '.$usuario;
 	
+	$usuario = $_POST['usuario'];   	$clave = $_POST['clave'];
+	$usuario = stripslashes($usuario);  $clave = stripslashes($clave);
+	echo 'Verificando Datos de: '.$usuario;
 	
 }else
 {
 	require_once("SCR/login.php");
 	login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy);
 	
-	}
-	
+}
 ?>

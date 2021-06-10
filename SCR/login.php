@@ -1,4 +1,3 @@
-
 <?PHP
 function login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy)
 {
