@@ -8,8 +8,7 @@ $scr=$_GET[scr];
 if($scr=='logout'){
 	session_destroy();
 	echo 'Usuario Deslogeado';
-	
-}elseif ($scr=='logeo'){ 
+	}elseif ($scr=='logeo'){ 
 	
 	$usuario = $_POST['usuario'];   	$clave = $_POST['clave'];
 	$usuario = stripslashes($usuario);  $clave = stripslashes($clave);
