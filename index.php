@@ -4,6 +4,11 @@ require_once("fnes.php");
 $titulopag='Inicio de Sesión';
 cabezera($titulopag, $datos_nombempresa);
 
+conexion($datos_iplocal, $datos_usuariodb, $datos_clavedb, $datos_database);
+
+$est_conex=$_POST['$est_conex'];
+$mens_pri='Bienvenido al sistema de Gestion Ingrese su Usuario y clave';
+
 $scr=$_GET[scr];
 if($scr=='logout'){
 	session_destroy();
@@ -17,7 +22,7 @@ if($scr=='logout'){
 }else
 {
 	require_once("SCR/login.php");
-	login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy);
-	
+	login($mens_pri, $datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy, $est_conex);	
 }
+
 ?>

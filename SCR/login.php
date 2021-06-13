@@ -1,15 +1,15 @@
 <?PHP
-function login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy)
+function login($mens_pri, $datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver, $datos_copy, $estado_base)
 {
 ?>
 <script type="text/javascript" src="js/formulario.js"></script>
 
-<form action="index.php?scr=logeo" method="post" name="login" id="login">
+<form action="index.php?scr=logeo" method="post" name="login" id="login" autocomplete="off">
   <p align="center">Sistema de Gestion y Control  </p>
   <table width="757" height="246" border="1" align="center">
     <tbody>
       <tr>
-        <td height="68" colspan="3" bgcolor="#FFFFFF" style="font-size: 18px">Mensaje: Bienvenido al sistema de Gestion Ingrese su Usuario y clave </td>
+        <td height="68" colspan="3" bgcolor="#FFFFFF" style="font-size: 18px">Mensaje: <?php echo $mens_pri;?> </td>
       </tr>
       <tr>
         <td width="265" height="30" bgcolor="#CCCCCC">Fecha:<?PHP echo date("d\/m\/Y");?></td>
@@ -17,11 +17,11 @@ function login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver
           <tbody>
             <tr>
               <td width="85">Usuario:</td>
-              <td width="355"><input name="usuario" type="text" id="usuario" tabindex="1" onKeyPress="return bajarEnter(this, event)" size="30" maxlength="30" required title="Ingrese el nombre de usuario."></td>
+              <td width="355"><input name="usuario" type="text" id="usuario" tabindex="1" onKeyPress="return bajarEnter(this, event)" size="30" maxlength="30" placeholder="Ingrese el nombre de usuario" required title="Ingrese el nombre de usuario."></td>
               </tr>
             <tr>
               <td>Clave:</td>
-              <td><input name="clave" type="password" id="clave" tabindex="2" size="30" maxlength="30" required title="Ingrese el su Clave."></td>
+              <td><input name="clave" type="password" id="clave" tabindex="2" size="30" maxlength="30" placeholder="Ingrese el su Clave" required title="Ingrese el su Clave."></td>
               </tr>
             </tbody>
         </table></td>
@@ -38,7 +38,7 @@ function login($datos_sucursal, $datos_nombempresa, $datos_localidad, $datos_ver
         <td width="245" height="23" align="right">Ver: <?PHP echo $datos_ver;?> año <?PHP echo $datos_copy;?></td>
       </tr>
       <tr>
-        <td colspan="3" align="center">Bases de Datos estado de conexión </td>
+        <td colspan="3" align="center">Bases de Datos estado: <?PHP echo $estado_base; ?> </td>
       </tr>
     </tbody>
   </table>
