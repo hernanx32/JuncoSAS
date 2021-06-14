@@ -6,18 +6,33 @@ cabezera($titulopag, $datos_nombempresa);
 
 conexion($datos_iplocal, $datos_usuariodb, $datos_clavedb, $datos_database);
 
-$est_conex=$_POST['$est_conex'];
-$mens_pri='Bienvenido al sistema de Gestion Ingrese su Usuario y clave';
+if(empty($mens_pri)){
+	$mens_pri='Bienvenido al sistema de Gestion Ingrese su Usuario y clave';
+}
 
 $scr=$_GET[scr];
 if($scr=='logout'){
 	session_destroy();
 	echo 'Usuario Deslogeado';
-	}elseif ($scr=='logeo'){ 
-	
+}elseif ($scr=='logeo'){ 
 	$usuario = $_POST['usuario'];   	$clave = $_POST['clave'];
 	$usuario = stripslashes($usuario);  $clave = stripslashes($clave);
 	echo 'Verificando Datos de: '.$usuario;
+
+	
+	//$db_conect = mysqli_connect($datos_iplocal, $datos_usuariodb, $datos_clavedb, $datos_database);
+		
+	$q="SELECT COUNT(*) as contar from usuarios where usuario= '$usuario' and clave= '$clave'";
+	$consulta=mysqli_query($con,$q);
+	$array= mysqli_fetch_array($consulta);
+	
+		
+	if($array['contar']>0){
+		echo "Correctos";
+	}else{
+		echo "Incorrectos";
+	}
+	
 	
 }else
 {
