@@ -30,11 +30,9 @@ if($scr=='logout'){
 		while ($fila = mysqli_fetch_row($consulta)) {
         printf ("%s (%s)\n", $fila[0], $fila[3]);
 		print("</br>");
-		
 		// liberar el conjunto de resultados 
 		mysqli_free_result($consulta);
 		}
-
 		// cerrar la conexión 
 		mysqli_close($con); 
 				
