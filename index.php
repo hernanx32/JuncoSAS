@@ -24,18 +24,19 @@ if($scr=='logout'){
 		
 	$q="SELECT * from usuarios where usuario= '$usuario' and clave= '$clave' and estado = '1'";
 	$consulta=mysqli_query($con,$q);
-	
+	$resltado=mysqli_num_rows($consulta);
+	echo $resltado;
 		
 		while ($fila = mysqli_fetch_row($consulta)) {
-        printf ("%s (%s)\n", $fila[0], $fila[1]);
+        printf ("%s (%s)\n", $fila[0], $fila[3]);
 		print("</br>");
 		
 		// liberar el conjunto de resultados 
-		mysqli_free_result($resultado);
+		mysqli_free_result($consulta);
 		}
 
 		// cerrar la conexión 
-		mysqli_close($enlace); 
+		mysqli_close($con); 
 				
 		
 }else
