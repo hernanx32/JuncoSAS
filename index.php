@@ -17,23 +17,27 @@ if($scr=='logout'){
 }elseif ($scr=='logeo'){ 
 	$usuario = $_POST['usuario'];   	$clave = $_POST['clave'];
 	$usuario = stripslashes($usuario);  $clave = stripslashes($clave);
-	echo 'Verificando Datos de: '.$usuario;
+	//echo 'Verificando Datos de: '.$usuario;
 
 	
 	//$db_conect = mysqli_connect($datos_iplocal, $datos_usuariodb, $datos_clavedb, $datos_database);
 		
-	$q="SELECT COUNT(*) as contar from usuarios where usuario= '$usuario' and clave= '$clave'";
+	$q="SELECT * from usuarios where usuario= '$usuario' and clave= '$clave' and estado = '1'";
 	$consulta=mysqli_query($con,$q);
-	$array= mysqli_fetch_array($consulta);
 	
 		
-	if($array['contar']>0){
-		echo "Correctos";
-	}else{
-		echo "Incorrectos";
-	}
-	
-	
+		while ($fila = mysqli_fetch_row($consulta)) {
+        printf ("%s (%s)\n", $fila[0], $fila[1]);
+		print("</br>");
+		
+		// liberar el conjunto de resultados 
+		mysqli_free_result($resultado);
+		}
+
+		// cerrar la conexión 
+		mysqli_close($enlace); 
+				
+		
 }else
 {
 	require_once("SCR/login.php");
