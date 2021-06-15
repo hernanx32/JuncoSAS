@@ -60,18 +60,13 @@ if($scr=='logout'){
 				header("location: ../$datos_path/deposito.php");
 				break;
 			}
-			
-			
 		}	
 	}else{
 		echo "Error 101: Usuario o Clave Icorrectos";
 		header("location: index.php?error=101");
-		
 	}
 		// cerrar la conexión 
 		mysqli_close($con); 
-				
-		
 }else
 {
 	require_once("SCR/login.php");

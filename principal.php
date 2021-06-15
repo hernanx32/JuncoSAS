@@ -1,4 +1,3 @@
-
 <?PHP session_start();
 require_once("fnes.php");
 //TITULO DE LA PAGINA
@@ -9,7 +8,7 @@ if($_SESSION['rol']!='1'){
 	header('location: index.php');
 }
 
-echo "Pagina Principal";
+echo "<h1>Bienvenido: " .$_SESSION['nom_vista']."</h1>";
 ?>
 
 </br><a href="/Junco/index.php?scr=logout">Salir</a>
