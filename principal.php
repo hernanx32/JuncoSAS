@@ -11,4 +11,6 @@ if($_SESSION['rol']!='1'){
 echo "<h1>Bienvenido: " .$_SESSION['nom_vista']."</h1>";
 ?>
 
-</br><a href="/Junco/index.php?scr=logout">Salir</a><span style="color: #000000"></span>
+</br>
+<p><a href="/Junco/index.php?scr=logout">Salir</a><span style="color: #000000"></span></p>
+<p>&nbsp;</p>
