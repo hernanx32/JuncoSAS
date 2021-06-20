@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+	*{
+		padding:0px;
+		margin: auto;
+		}
+	#header{
+		margin: auto;
+		width: 500px;
+		font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+		}
+	ul, ol {
+		list-style: none; 
+		}
+	.nav li a {            /*Configuracion del Menu*/
+		/*Color del Menu*/
+		background-color: cadetblue; 
+		/*Color del Letras*/
+		color: yellow;
+		/*Quita los Subrayados*/
+		text-decoration: none;
+		/*Separacion de Letras*/
+		padding: 10px 15px;
+		/*Para q se Vea en bloque*/
+		display: block;
+		}
+	/*colo cuando posa el curso en el menu*/
+	.nav li a:hover {
+		background-color: blue;
+		}
+	/*Organiza El menu*/
+	.nav > li {
+		float: left;
+	}
+
+	.nav li ul {
+		display:none; /*Para que no se vea los sub menu*/
+		position: absolute;
+		min-width: 140px; /* Tamaño sub menu */
+	}
+	.nav li:hover > ul {
+		display: block;
+	}
+	/*Posicion del Sub-Sub-Menu*/
+	.nav li ul li {
+		position: relative;
+	} 
+	.nav li ul li ul {
+		right: -140px;
+		top: 0;
+	}
